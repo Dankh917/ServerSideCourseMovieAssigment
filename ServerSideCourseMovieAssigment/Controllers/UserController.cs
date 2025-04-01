@@ -14,8 +14,8 @@ namespace ServerSideHW1.Controllers
 		[HttpGet]
 		public IEnumerable<User> Get()
 		{
-			//Used the entire Path beacuse VS thinks User is property of ControllerBase insted the class we created, naming conflict
-			return ServerSideHW1.Models.User.Read(); 
+			// Used the entire Path beacuse VS thinks User is property of ControllerBase insted the class we created, naming conflict
+			return ServerSideHW1.Models.User.Read();
 		}
 
 		// GET api/<UserController>/5

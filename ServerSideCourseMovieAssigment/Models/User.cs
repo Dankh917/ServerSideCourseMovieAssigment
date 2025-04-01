@@ -27,7 +27,7 @@
 		{
 			foreach (User user in UsersList)
 			{
-				if (Id == user.Id)
+				if (this.Id == user.Id)
 				{
 					return false;
 				}

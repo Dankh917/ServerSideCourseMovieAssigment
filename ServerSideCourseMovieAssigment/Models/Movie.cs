@@ -8,7 +8,7 @@
 		public string Description { get; set; }
 		public string PrimaryImage { get; set; }
 		public int Year { get; set; }
-		public DateTime ReleseDate { get; set; } 
+		public DateTime ReleaseDate { get; set; } 
 		public string Language { get; set; }
 		public double Budget { get; set; }
 		public double GrossWorldWide { get; set; }
@@ -22,7 +22,7 @@
 		static List<Movie> MovieList = new List<Movie>();
 
 		public Movie(int id, string url, string primaryTitle, string description, string primaryImage, int year,
-					 DateTime releseDate, string language, double budget, double grossWorldWide, string geners, 
+					 DateTime releaseDate, string language, double budget, double grossWorldWide, string geners, 
 					 bool isAdult, int runTimeMinutes, float runTimeSeconds, float averageRating, int numVotes)
 		{
 			Id = id;
@@ -31,7 +31,7 @@
 			Description = description;
 			PrimaryImage = primaryImage;
 			Year = year;
-			ReleseDate = releseDate;
+            ReleaseDate = releaseDate;
 			Language = language;
 			Budget = budget;
 			GrossWorldWide = grossWorldWide;
@@ -50,7 +50,7 @@
 		public bool Insert()
 		{
 			foreach (Movie movie in MovieList) { 
-				if(Id == movie.Id || PrimaryTitle == movie.PrimaryTitle)
+				if(this.Id == movie.Id || this.PrimaryTitle == movie.PrimaryTitle)
 				{
 					return false;
 				}
@@ -71,7 +71,7 @@
 			
 			foreach (Movie movie in MovieList)
 			{
-				if (movie.PrimaryTitle.Contains(title))
+				if (movie.PrimaryTitle.ToLower().Contains(title.ToLower()))
 				{
 					selectedMovies.Add(movie);
 				}
@@ -85,7 +85,7 @@
 
 			foreach (Movie movie in MovieList)
 			{
-				if(movie.ReleseDate >= startDate && movie.ReleseDate <= endDate)
+				if(movie.ReleaseDate >= startDate && movie.ReleaseDate <= endDate)
 				{
 					selectedMovies.Add(movie);
 				}
