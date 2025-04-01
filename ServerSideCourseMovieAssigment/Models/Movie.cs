@@ -83,20 +83,17 @@
 		{
 			List<Movie> selectedMovies = new List<Movie>();
 
-			if (startDate <= endDate)
+			
+			foreach (Movie movie in MovieList)
 			{
-				foreach (Movie movie in MovieList)
+				if(movie.ReleseDate >= startDate && movie.ReleseDate <= endDate)
 				{
-					if(movie.ReleseDate >= startDate && movie.ReleseDate <= endDate)
-					{
-						selectedMovies.Add(movie);
-					}
+					selectedMovies.Add(movie);
 				}
-				return selectedMovies;
 			}
-			else { 
-				throw new ArgumentOutOfRangeException("end-date is before start-date");
-			}
+			return selectedMovies;
+			
+			
 			
 
 		}

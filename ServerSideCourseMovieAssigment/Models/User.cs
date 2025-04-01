@@ -11,7 +11,7 @@
 
 		static List<User> UsersList = new List<User>();
 
-		public User(int id, string name, string email, string password, bool isActive)
+		public User(int id, string name, string email, string password, bool isActive = true)
 		{
 			Id = id;
 			Name = name;
