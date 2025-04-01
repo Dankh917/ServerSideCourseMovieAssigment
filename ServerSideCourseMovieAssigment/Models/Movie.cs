@@ -19,11 +19,11 @@
 		public float AverageRating { get; set; }
 		public int NumVotes { get; set; }
 
-		static List<Movie> MovieList = new List<Movie>(); //holds all created instances of movies 
+		static List<Movie> MovieList = new List<Movie>();
 
 		public Movie(int id, string url, string primaryTitle, string description, string primaryImage, int year,
-			DateTime releseDate, string language, double budget, double grossWorldWide, string geners, bool isAdult,
-			int runTimeMinutes, float runTimeSeconds, float averageRating, int numVotes)
+					 DateTime releseDate, string language, double budget, double grossWorldWide, string geners, 
+					 bool isAdult, int runTimeMinutes, float runTimeSeconds, float averageRating, int numVotes)
 		{
 			Id = id;
 			Url = url;
@@ -77,13 +77,12 @@
 				}
 			}
 			return selectedMovies;
-
 		}
+
 		static public List<Movie> GetByReleaseDate(DateTime startDate, DateTime endDate)
 		{
 			List<Movie> selectedMovies = new List<Movie>();
 
-			
 			foreach (Movie movie in MovieList)
 			{
 				if(movie.ReleseDate >= startDate && movie.ReleseDate <= endDate)
@@ -92,10 +91,6 @@
 				}
 			}
 			return selectedMovies;
-			
-			
-			
-
 		}
 	}
 }

@@ -16,13 +16,13 @@ namespace ServerSideHW1.Controllers
 			return Movie.Read();
 		}
 		
-		[HttpGet ("searchByTitleContainsString - QueryString")]
+		[HttpGet ("searchByTitle")]
 		public IEnumerable<Movie> GetByTitle(string title)
 		{
 			return Movie.GetByTitle(title);
 		}
 		
-		[HttpGet ("SearchByDate - ResourceRouting/startDate/{startDate}/endDate/{endDate}")]
+		[HttpGet ("searchByReleaseDate/startDate/{startDate}/endDate/{endDate}")]
 		public IEnumerable<Movie> GetByReleaseDate(DateTime startDate, DateTime endDate)
 		{
 			return Movie.GetByReleaseDate(startDate, endDate);

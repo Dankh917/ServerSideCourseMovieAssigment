@@ -2,7 +2,6 @@
 {
 	public class User
 	{
-		
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Email { get; set; }
@@ -33,7 +32,6 @@
 					return false;
 				}
 			}
-
 			UsersList.Add(this);
 			return true;
 		}
@@ -42,6 +40,5 @@
 		{
 			return UsersList;
 		}
-
 	}
 }
