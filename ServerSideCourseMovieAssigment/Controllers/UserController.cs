@@ -42,6 +42,7 @@ namespace ServerSideHW1.Controllers
 		[HttpDelete("{id}")]
 		public void Delete(int id)
 		{
+			
 		}
 	}
 }
