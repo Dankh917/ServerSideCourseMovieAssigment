@@ -50,7 +50,7 @@ namespace ServerSideHW1.Controllers
 
 		// DELETE api/<MovieController>/5
 		[HttpDelete("{id}")]
-		public void Delete(int id)
+		public void Delete(string id)
 		{
 			Movie.DeleteMovie(id);
 		}

@@ -2,7 +2,7 @@
 {
 	public class Movie
 	{
-		public int Id { get; set; }
+		public string Id { get; set; }
 		public string Url { get; set; }
 		public string PrimaryTitle { get; set; }
 		public string Description { get; set; }
@@ -21,7 +21,7 @@
 
 		static List<Movie> MovieList = new List<Movie>();
 
-		public Movie(int id, string url, string primaryTitle, string description, string primaryImage, int year,
+		public Movie(string id, string url, string primaryTitle, string description, string primaryImage, int year,
 					 DateTime releaseDate, string language, double budget, double grossWorldWide, string geners,
 					 bool isAdult, int runTimeMinutes, float runTimeSeconds, float averageRating, int numVotes)
 		{
@@ -94,9 +94,9 @@
 			return selectedMovies;
 		}
 
-		static public void DeleteMovie(int id)
+		static public void DeleteMovie(string id)
 		{
-			foreach (Movie movie in MovieList.ToList()) //Gives error Iteration error without "Tolist"
+			foreach (Movie movie in MovieList.ToList()) //"Tolist" creats a copy and iterates over it otherwise iteration error
 			{
 				if (movie.Id == id)
 				{
